@@ -1,0 +1,17 @@
+Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+
+To use Jest, you need to install it using npm > npm install --save-dev jest
+
+----------------------------------------------
+
+1 sayHello.js + sayHello.test.js
+
+2 sum.js + sum.test.js
+
+3 allData.js + allData.test.js
+
+4 myMatchers.test.js
+
+5 mock.test.js
+
+6 Code coverage in package.json jest options to gernerate reports
