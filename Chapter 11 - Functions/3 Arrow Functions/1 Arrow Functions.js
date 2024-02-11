@@ -43,6 +43,8 @@ let printSumWithDefaultParametersSimply = (a = 0, b = 0) => console.log(a + b);
 printSumWithDefaultParameters(); // 0
 printSumWithDefaultParametersSimply(); // 0
 
+// (The default value is only used if the argument is missing or if you pass undefined explicitly.)
+
 // ===========================================================================================
 
 // Example with Return Statement
