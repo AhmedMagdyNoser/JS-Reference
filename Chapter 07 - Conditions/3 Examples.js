@@ -12,6 +12,8 @@ true ? console.log(true) : console.log(false); // true
 [] ? console.log(true) : console.log(false); // true
 ({}) ? console.log(true) : console.log(false); // true
 
+// All values are truthy except the falsy values: false, 0, "", null, undefined, NaN, -0, 0n, and document.all.
+
 // ----------------------------------------------
 
 // if .. in
