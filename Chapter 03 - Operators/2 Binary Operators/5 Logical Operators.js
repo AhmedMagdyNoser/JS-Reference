@@ -65,6 +65,18 @@ Generally:
 
 // ===========================================================================================
 
+// Nullish coalescing operator (??)
+
+// It returns its right-hand side operand when its left-hand side operand is null or undefined,
+// and otherwise returns its left-hand side operand.
+
+console.log(null ?? 'default string'); // default string
+console.log(0 ?? 42); // 0
+
+// It can be seen as a special case of the logical OR (||) operator.
+
+// ===========================================================================================
+
 // Logical NOT (!) operator - This is a unary operator
 // Logical negation requires only one condition
 
