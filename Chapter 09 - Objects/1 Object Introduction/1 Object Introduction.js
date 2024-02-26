@@ -26,7 +26,7 @@ let user1 = {
 };
 
 console.log(user1.name); // John (Dot Notation)
-console.log(user1['name']); // John (Bracket Notation)
+console.log(user1['name']); // John (Bracket Notation) - We can use an expression inside the brackets like user1['na' + 'me']
 
 console.log(user1.age); // 30
 console.log(user1['age']); // 30
