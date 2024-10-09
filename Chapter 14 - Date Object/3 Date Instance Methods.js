@@ -1,36 +1,33 @@
-// Date Instance Methods
-
-const date1 = new Date(404344800000); // Unix time to 25 Oct 1982
+// Date Instance Methods - Getters and Setters
 
 // ===========================================================================================
 
-// Date methods
+// Date getters
 
-console.log(date1.toLocaleDateString()); // Locally
-console.log(date1.toLocaleTimeString()); // Locally
-console.log(date1.toDateString()); // Locally
-console.log(date1.toTimeString()); // Locally
-console.log(date1.toString()); // Locally
-console.log(date1.toISOString()); // UTC
-console.log(date1.toJSON()); // UTC
-console.log(date1.toUTCString()); // UTC
+const myDate = new Date(); // the date now
+
+console.log('Unix time to this date in UTC:', myDate.getTime()); // unix time
+
+// The next instance methods all are about the local time (not UTC)
+
+console.log('The day of week:', myDate.getDay()); // weekday (Sun = 0, Mon = 1, Tue = 2, ..., Sat = 6)
+console.log('The day of month:', myDate.getDate()); // day of month
+console.log('The month:', myDate.getMonth()); // month (Jan = 0, Feb = 1, Mar = 2, ..., Dec = 11)
+console.log('The year:', myDate.getFullYear()); // year
+
+console.log('Hours:', myDate.getHours());
+console.log('Minutes:', myDate.getMinutes());
+console.log('Seconds:', myDate.getSeconds());
+console.log('Timezone:', myDate.getTimezoneOffset());
 
 // ===========================================================================================
 
-// toLocaleDateString() and toLocaleTimeString() methods
+// Also, you can use the setter methods like: myDate.setMonth(5);
 
-// You can pass two arguments to the toLocaleDateString() and toLocaleTimeString():
-//   1 A locale string that contain one or more language. (e.g. en-UK, en-US, ar-EG)
-//   2 An object that contains one or more properties that specify comparison options.
+// ------------------------------------ (Exercise Below) -------------------------------------
 
-console.log(
-  date1.toLocaleDateString('en-UK', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-    hour12: true,
-    hour: '2-digit',
-    minute: '2-digit',
-  })
-);
+// Display the number of days left in the current year.
+
+// Solution
+let lastDay = new Date(myDate.getFullYear(), 11, 31, 23, 59, 59, 999);
+console.log(Math.round((lastDay - myDate) / 1000 / 60 / 60 / 24), 'Days Left');
